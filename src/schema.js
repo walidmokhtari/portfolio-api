@@ -8,6 +8,12 @@ const typeDefs = gql`
     email: String!
     password: String!
     isAdmin: Boolean!
+    cv: String
+    github: String
+    facebook: String
+    twitter: String
+    linkedin: String
+    picture: String
     projects: [Project]
     diplomas: [Diploma]
   }
@@ -47,6 +53,12 @@ const typeDefs = gql`
       email: String!
       password: String!
       isAdmin: Boolean!
+      cv: String
+      github: String
+      facebook: String
+      twitter: String
+      linkedin: String
+      picture: String
     ): User!
     login(email: String!, password: String!): UserAuth!
     addProject(image: String!, userId: ID!): Project!

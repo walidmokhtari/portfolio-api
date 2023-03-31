@@ -6,6 +6,12 @@ CREATE TABLE "User" (
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "isAdmin" BOOLEAN NOT NULL,
+    "cv" TEXT NOT NULL,
+    "github" TEXT NOT NULL,
+    "facebook" TEXT NOT NULL,
+    "twitter" TEXT NOT NULL,
+    "linkedin" TEXT NOT NULL,
+    "picture" TEXT NOT NULL,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

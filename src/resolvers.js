@@ -48,7 +48,19 @@ const resolvers = {
   },
   Mutation: {
     registerUser: async (parent, args) => {
-      const { firstName, lastName, email, password, isAdmin } = args
+      const {
+        firstName,
+        lastName,
+        email,
+        password,
+        isAdmin,
+        cv,
+        github,
+        facebook,
+        twitter,
+        linkedin,
+        picture,
+      } = args
       const passwordHashed = await hash(password, 10)
       return prisma.user.create({
         data: {
@@ -57,6 +69,12 @@ const resolvers = {
           email: email,
           password: passwordHashed,
           isAdmin: isAdmin,
+          cv: cv,
+          github: github,
+          facebook: facebook,
+          twitter: twitter,
+          linkedin: linkedin,
+          picture: picture,
         },
       })
     },
