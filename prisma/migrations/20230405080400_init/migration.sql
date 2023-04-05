@@ -20,6 +20,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Project" (
     "id" SERIAL NOT NULL,
     "image" TEXT NOT NULL,
+    "link" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
 
     CONSTRAINT "Project_pkey" PRIMARY KEY ("id")

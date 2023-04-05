@@ -26,6 +26,7 @@ const typeDefs = gql`
   type Project {
     id: ID!
     image: String!
+    link: String!
     userId: ID!
   }
 
@@ -61,7 +62,7 @@ const typeDefs = gql`
       picture: String
     ): User!
     login(email: String!, password: String!): UserAuth!
-    addProject(image: String!, userId: ID!): Project!
+    addProject(image: String!, link: String!, userId: ID!): Project!
     addDiploma(
       title: String!
       place: String!

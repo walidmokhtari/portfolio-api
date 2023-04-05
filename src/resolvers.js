@@ -78,33 +78,12 @@ const resolvers = {
         },
       })
     },
-    /*login: async (parent, args) => {
-      const { email, password } = args
-
-      const user = await prisma.user.findOne({ where: { email } })
-
-      if (!user) {
-        throw new Error('Invalid login')
-      }
-
-      const validPassword = await hash(password, user.password)
-
-      if (!validPassword) {
-        throw new Error('Invalid login')
-      }
-
-      //const token = jwt.sign({ userId: user.id }, APP_SECRET)
-
-      return {
-        //token,
-        user,
-      }
-    },*/
     addProject: async (parent, args) => {
-      const { image, userId } = args
+      const { image, link, userId } = args
       return await prisma.project.create({
         data: {
           image: image,
+          link: link,
           userId: Number(userId),
         },
       })
