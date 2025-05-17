@@ -8,20 +8,22 @@ generator client {
 }
 
 model User {
-  id        Int     @id @default(autoincrement())
-  firstName String
-  lastName  String
-  email     String
-  password  String
-  isAdmin   Boolean
-  cv        String
-  github    String
-  facebook  String
-  twitter   String
-  linkedin  String
-  picture   String
-  projects  Project[]
-  diplomas  Diploma[]
+  id            Int     @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  email         String
+  password      String
+  isAdmin       Boolean
+  job           String
+  description   String
+  cv            String
+  github        String
+  facebook      String
+  twitter       String
+  linkedin      String
+  picture       String
+  projects      Project[]
+  diplomas      Diploma[]
 }
 
 model Project {
