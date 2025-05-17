@@ -14,6 +14,8 @@ const typeDefs = gql`
     twitter: String
     linkedin: String
     picture: String
+    job: String
+    description: String
     projects: [Project]
     diplomas: [Diploma]
   }

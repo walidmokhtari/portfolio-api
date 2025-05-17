@@ -4,12 +4,13 @@ const { hash } = require('bcryptjs')
 const resolvers = {
   Query: {
     users: () => {
-      return prisma.user.findMany({
+      const user =  prisma.user.findMany({
         include: {
           projects: true,
           diplomas: true,
         },
       })
+      return user
     },
     user: (parent, args) => {
       const { id } = args
